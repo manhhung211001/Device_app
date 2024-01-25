@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "body": "typicode"
+    }
+  ],
+  "device": [
+    {
+      "deviceName": "Dir conditioning",
+      "weight": 666,
+      "size": 2323,
+      "price": 1451345,
+      "location": "Cty 2",
+      "date": "2024-01-03T17:00:00.000Z",
+      "note": "SAss",
+      "id": "2"
+    },
+    {
+      "deviceName": "Camera Ezviz C6N",
+      "weight": 34324,
+      "size": 5645,
+      "price": 6456,
+      "location": "Cty 2",
+      "date": "4564-01-01T00:00:00.000Z",
+      "note": "46456",
+      "id": "4688"
+    },
+    {
+      "id": "9b4b",
+      "deviceName": "Camera Ezviz C6N",
+      "weight": 12,
+      "size": 2,
+      "price": 2,
+      "location": "Cty 1",
+      "date": "2024-01-23T17:00:00.000Z",
+      "note": "sss"
+    },
+    {
+      "id": "d586",
+      "deviceName": "Camera Ezviz C6N",
+      "weight": 12,
+      "size": 2,
+      "price": 2,
+      "location": "Cty 1",
+      "date": "2024-01-23T17:00:00.000Z",
+      "note": "sss"
+    }
+  ]
+}

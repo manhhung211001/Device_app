@@ -1,0 +1,56 @@
+<div mat-dialog-title>
+    <h1>Device Form</h1>
+</div>
+<form [formGroup]="deviceForm" (ngSubmit)="addProduct()">
+     <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Device Name</mat-label>  
+                <mat-select formControlName="deviceName">
+                    <mat-option *ngFor = "let val of education" [value]="val" >
+                        {{val}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>weight</mat-label>  
+                <input matInput type="number" placeholder="Ki-lo-gam" formControlName="weight">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Size</mat-label>  
+                <input matInput type="number" placeholder="centimet" formControlName="size">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>price</mat-label>  
+                <input matInput type="number" placeholder="VND" formControlName="price">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Location</mat-label>  
+                <mat-select formControlName="location">
+                    <mat-option *ngFor = "let val of area" [value]="val">
+                        {{val}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <mat-form-field class="note" appearance="outline">
+            <mat-label>Note</mat-label>
+            <textarea matInput formControlName="note"></textarea>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="action" align="end">
+        <button mat-raised-button color="primary"  (click)="addProduct()">{{actionBtn}}</button>
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>   
+    </div>
+</form>
