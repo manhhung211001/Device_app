@@ -21,9 +21,9 @@ export class DeviceAddEditComponent implements OnInit{
   ];
 
   area: string[] = [
-    'Cty 1',
-    'Cty 2',
-    'Cty 3'
+    'Tây hồ',
+    'Cầu Giấy',
+    'Thanh Xuân'
   ];
 
   constructor(
