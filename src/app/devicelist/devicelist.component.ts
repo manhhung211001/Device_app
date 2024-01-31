@@ -13,7 +13,7 @@ import { Device } from '../services/device.model';
 })
 export class DevicelistComponent implements OnInit {
 
-  displayedColumns: string[] = [
+  displayedColumns: any[] = [
     'id',
     'deviceName', 
     'weight', 
@@ -46,15 +46,7 @@ export class DevicelistComponent implements OnInit {
     });
   }
 
-  // openAddEditDevice(row : Device){
-  //   this._dialog.open(DeviceAddEditComponent,{
-  //     width:'30%',
-  //   }).afterClosed().subscribe(val=>{
-  //     if(val === 'save'){
-  //       this.getDeviceList();
-  //     }
-  //   })
-  // }
+
 
   getDeviceList(){
     this._deviceService.getDeviceList().subscribe({
@@ -96,7 +88,5 @@ export class DevicelistComponent implements OnInit {
       error: console.log,
     });
   }
-
-
 }
 

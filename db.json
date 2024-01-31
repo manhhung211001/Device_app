@@ -8,44 +8,134 @@
   ],
   "device": [
     {
+      "deviceName": "Router Wifi Tenda",
+      "weight": 4,
+      "size": 66,
+      "price": 343,
+      "location": "Cầu Giấy",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "234",
+      "id": "ce5c"
+    },
+    {
+      "id": "b445",
+      "deviceName": "Router Wifi Tenda",
+      "weight": 4,
+      "size": 66,
+      "price": 343,
+      "location": "Tây hồ",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "234"
+    },
+    {
+      "id": "bd59",
+      "deviceName": "Camera Ezviz C6N",
+      "weight": 5,
+      "size": 2,
+      "price": 55,
+      "location": "Thanh Xuân",
+      "date": "2024-01-11T17:00:00.000Z",
+      "note": "2332"
+    },
+    {
+      "id": "4598",
+      "deviceName": "Camera Ezviz C6N",
+      "weight": 5,
+      "size": 2,
+      "price": 55,
+      "location": "Thanh Xuân",
+      "date": "2024-01-11T17:00:00.000Z",
+      "note": "2332"
+    },
+    {
       "deviceName": "Dir conditioning",
-      "weight": 666,
-      "size": 2323,
-      "price": 1451345,
-      "location": "Cty 2",
-      "date": "2024-01-03T17:00:00.000Z",
-      "note": "SAss",
-      "id": "2"
+      "weight": 0,
+      "size": 3,
+      "price": 98,
+      "location": "Cầu Giấy",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "kk",
+      "id": "e342"
+    },
+    {
+      "id": "c425",
+      "deviceName": "Dir conditioning",
+      "weight": 0,
+      "size": 3,
+      "price": 98,
+      "location": "Tây hồ",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "kk"
+    },
+    {
+      "id": "5b94",
+      "deviceName": "Camera Ezviz C6N",
+      "weight": 3,
+      "size": 32,
+      "price": 23,
+      "location": "Cầu Giấy",
+      "date": "2023-12-31T17:00:00.000Z",
+      "note": "ưe"
     },
     {
       "deviceName": "Camera Ezviz C6N",
-      "weight": 34324,
-      "size": 5645,
-      "price": 6456,
-      "location": "Cty 2",
-      "date": "4564-01-01T00:00:00.000Z",
-      "note": "46456",
-      "id": "4688"
+      "weight": 88,
+      "size": 5,
+      "price": 8687,
+      "location": "Thanh Xuân",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "ughjgh",
+      "id": "154a"
     },
     {
-      "id": "9b4b",
+      "id": "d36b",
       "deviceName": "Camera Ezviz C6N",
-      "weight": 12,
-      "size": 2,
-      "price": 2,
-      "location": "Cty 1",
-      "date": "2024-01-23T17:00:00.000Z",
-      "note": "sss"
+      "weight": 88,
+      "size": 5,
+      "price": 8687,
+      "location": "Tây hồ",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "ughjgh"
     },
     {
-      "id": "d586",
+      "id": "5345",
       "deviceName": "Camera Ezviz C6N",
-      "weight": 12,
-      "size": 2,
-      "price": 2,
-      "location": "Cty 1",
-      "date": "2024-01-23T17:00:00.000Z",
-      "note": "sss"
+      "weight": 5,
+      "size": 23,
+      "price": 76,
+      "location": "Thanh Xuân",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "ko co"
+    },
+    {
+      "id": "5eca",
+      "deviceName": "Camera Ezviz C6N",
+      "weight": 5,
+      "size": 23,
+      "price": 76,
+      "location": "Thanh Xuân",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "ko co"
+    },
+    {
+      "id": "af3d",
+      "deviceName": "Router Wifi Tenda",
+      "weight": 55,
+      "size": 453,
+      "price": 234,
+      "location": "Thanh Xuân",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "34"
+    },
+    {
+      "id": "3adf",
+      "deviceName": "Router Wifi Tenda",
+      "weight": 55,
+      "size": 453,
+      "price": 234,
+      "location": "Thanh Xuân",
+      "date": "2024-01-13T17:00:00.000Z",
+      "note": "34"
     }
   ]
 }

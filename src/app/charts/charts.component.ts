@@ -13,60 +13,6 @@ import { DeviceService } from '../services/device.service';
 })
 export class ChartsComponent implements OnInit{
   
-
-// @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
-
-// public barChartOptions: ChartConfiguration['options'] = {
-
-//   scales: {
-//     x: {},
-//     y: {
-//       min: 0,
-//     },
-//   },
-//   plugins: {
-//     legend: {
-//       display: true,
-//     },
-//     datalabels: {
-//       anchor: 'end',
-//       align: 'end',
-//     },
-//   },
-// };
-// public barChartType: ChartType = 'bar';
-// public barChartPlugins = [DataLabelsPlugin];
-
-// public barChartData: ChartData<'bar'> = {
-//   labels: ['Tây hồ', 'Cầu Giấy', 'Thanh Xuân'],
-//   datasets: [
-//     { data: [5, 7, 12, 9, 12, 15, 14], label: 'Camera Ezviz C6N' },
-//     { data: [5, 7, 12, 9, 12, 15, 14], label: 'Router Wifi Tenda' },
-//     { data: [5, 7, 12, 9, 12, 15, 14], label: 'Dir conditioning' },
-//   ],
-// };
-
-// // events
-// public chartClicked({
-//   event,
-//   active,
-// }: {
-//   event?: ChartEvent;
-//   active?: object[];
-// }): void {
-//   console.log(event, active);
-// }
-
-// public chartHovered({
-//   event,
-//   active,
-// }: {
-//   event?: ChartEvent;
-//   active?: object[];
-// }): void {
-//   console.log(event, active);
-// }
-
 data:any;
 datadevice:any[]=[];
 datalocation:any[]=[];

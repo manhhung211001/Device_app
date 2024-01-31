@@ -38,6 +38,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {NgChartsModule} from 'ng2-charts';
+import { ChartsComponent } from './charts/charts.component';
+import { DeviceService } from './services/device.service';
+
 
 
 @NgModule({
@@ -46,7 +50,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HomeComponent,
     MapComponent,
     DevicelistComponent,
-    DeviceAddEditComponent
+    DeviceAddEditComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -81,10 +86,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ReactiveFormsModule,
     HttpClientModule,
     MatSortModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgChartsModule
     
   ],
-  providers: [],
+  providers: [DeviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

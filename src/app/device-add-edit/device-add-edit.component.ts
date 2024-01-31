@@ -32,20 +32,8 @@ export class DeviceAddEditComponent implements OnInit{
     private _dialogRef: MatDialogRef<DeviceAddEditComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Device
     ){
-    // this.deviceForm = this._fb.group({
 
-    //   deviceName: '',
-    //   weight: '',
-    //   size: '',
-    //   price: '',
-    //   location: '',
-    //   date: '',
-    //   note: ''
-  
-    // });
   }
-
-
 
   ngOnInit(): void {
     this.deviceForm = this._fb.group({

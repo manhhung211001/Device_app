@@ -3,9 +3,12 @@
     <mat-icon>menu</mat-icon>
   </button>
   <span id="menuTitle">Device Iot App</span>
-  <a mat-button routerLink="/" class="top-menu-item"><mat-icon>home</mat-icon>Home</a>
-  <a mat-button routerLink="/devicelist" class="top-menu-item"><mat-icon>settings</mat-icon>Device List</a>
-  <a mat-button routerLink="map" class="top-menu-item"><mat-icon> location_on</mat-icon>Map</a>
+<div class="menuleft">
+    <a mat-button routerLink="/" class="top-menu-item"><mat-icon>home</mat-icon>Home</a>
+    <a mat-button routerLink="/devicelist" class="top-menu-item"><mat-icon>settings</mat-icon>Device List</a>
+    <a mat-button routerLink="map" class="top-menu-item"><mat-icon> location_on</mat-icon>Map</a>
+    <a mat-button routerLink="charts" class="top-menu-item"><mat-icon> insert_chart_outlined</mat-icon>Chart Device</a>
+</div>
 
 </mat-toolbar>
 
@@ -23,6 +26,11 @@
         <a (click)="sidenav.close()" mat-button routerLink="map" class="side-menu-item"><mat-icon> location_on</mat-icon>
           Map</a>
       </div>
+      <div>
+        <a (click)="sidenav.close()" mat-button routerLink="charts" class="side-menu-item"><mat-icon> insert_chart_outlined</mat-icon>
+          Chart Device</a>
+      </div>
+      
   </div>
 
   </mat-sidenav>

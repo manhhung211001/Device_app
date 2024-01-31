@@ -6,6 +6,6 @@ export interface Device {
    size: number,
    price: number,
    location:string,
-   date:Date,
+   date:any,
    note:string
   }
