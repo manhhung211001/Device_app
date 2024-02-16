@@ -1,1 +1,20 @@
-<p>map works!</p>
+
+<div class="search">
+  <mat-form-field appearance="fill">
+      <mat-label>Search by ID</mat-label>
+      <input matInput [(ngModel)]="id" placeholder="Enter ID" />
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="searchDevice()">Search</button>
+  
+    <div *ngIf="device">
+      <p>Device found at ({{ device.location.latitude }}, {{ device.location.longitude }})</p>
+      <div #mapContainer class="map"></div>
+    </div>
+  
+    <div *ngIf="!device && searched">
+      <p>No device found with the specified ID.</p>
+    </div>
+</div>
+  <div id='map' style='width: auto; height: 550px ;'></div>
+  

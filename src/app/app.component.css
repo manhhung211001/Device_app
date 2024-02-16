@@ -9,7 +9,9 @@
   }
   
   .mat-toolbar{
+    position: fixed;
     height: 60px;
+    z-index: 1000;
   }
   
   .side-nav-items{

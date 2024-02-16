@@ -26,7 +26,6 @@ constructor(private deviceservice:DeviceService){}
 ngOnInit() {
   this.deviceservice.getDeviceList().subscribe(res => {
     this.data = res;
-
     if (this.data != null) {
       this.countDevicesByLocation();
       this.showChartData();

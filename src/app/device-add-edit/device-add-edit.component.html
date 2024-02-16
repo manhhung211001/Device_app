@@ -30,7 +30,7 @@
         <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>Location</mat-label>  
-                <mat-select formControlName="location">
+                <mat-select formControlName="location" (selectionChange)="onLocationChange($event.value)">
                     <mat-option *ngFor = "let val of area" [value]="val">
                         {{val}}
                     </mat-option>
@@ -44,6 +44,15 @@
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
         </div>
+
+        <!-- <div class="row">
+            <mat-form-field>
+              <input matInput placeholder="Vĩ độ" formControlName="latitude" />
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Kinh độ" formControlName="longitude" />
+            </mat-form-field>
+          </div> -->
         <mat-form-field class="note" appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note"></textarea>

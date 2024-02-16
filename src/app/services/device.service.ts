@@ -9,7 +9,7 @@ import { Device } from './device.model';
 export class DeviceService {
 
   constructor(private _http: HttpClient) {}
-  
+
 
   addDevice(data: Device){
     return this._http.post<Device>("http://localhost:3000/device",data);
@@ -17,6 +17,10 @@ export class DeviceService {
 
   getDeviceList(){
     return this._http.get<Device[]>("http://localhost:3000/device");
+  }
+
+  getDeviceId(id: any){
+    return this._http.get("http://localhost:3000/device/"+id)
   }
 
   deleteDevice(id: any){

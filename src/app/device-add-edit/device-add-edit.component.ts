@@ -26,6 +26,13 @@ export class DeviceAddEditComponent implements OnInit{
     'Thanh Xuân'
   ];
 
+  readonly defaultCoordinates: { [location: string]: { latitude: number; longitude: number } } = {
+    'Tây hồ': { latitude: 21.064519, longitude:  105.809917 },
+    'Cầu Giấy': { latitude:21.036044 , longitude:  105.790054 },
+    'Thanh Xuân': { latitude: 21.006170, longitude:  105.805721},
+
+  };
+
   constructor(
     private _fb: FormBuilder, 
     private _deviceSevice: DeviceService, 
@@ -41,20 +48,33 @@ export class DeviceAddEditComponent implements OnInit{
       weight : ['',Validators.required],
       size : ['',Validators.required],
       price : ['',Validators.required],
-      location : ['',Validators.required],
+      location: ["", Validators.required],
+      latitude: ['', Validators.required],
+      longitude: ['', Validators.required],
       date : ['',Validators.required],
       note : ['',Validators.required]
     });
 
     if(this.data){
       this.actionBtn = "update";
-      this.deviceForm.controls['deviceName'].setValue(this.data.deviceName);
-      this.deviceForm.controls['weight'].setValue(this.data.weight);
-      this.deviceForm.controls['size'].setValue(this.data.size);
-      this.deviceForm.controls['price'].setValue(this.data.price);
-      this.deviceForm.controls['location'].setValue(this.data.location);
-      this.deviceForm.controls['date'].setValue(this.data.date);
-      this.deviceForm.controls['note'].setValue(this.data.note);
+      this.deviceForm.patchValue(this.data);
+      // this.deviceForm.controls['deviceName'].setValue(this.data.deviceName);
+      // this.deviceForm.controls['weight'].setValue(this.data.weight);
+      // this.deviceForm.controls['size'].setValue(this.data.size);
+      // this.deviceForm.controls['price'].setValue(this.data.price);
+      // this.deviceForm.controls['location'].setValue(this.data.location);
+      // this.deviceForm.controls['date'].setValue(this.data.date);
+      // this.deviceForm.controls['note'].setValue(this.data.note);
+    }
+
+  }
+  onLocationChange(location: string) {
+    const defaultCoords = this.defaultCoordinates[location];
+    if (defaultCoords) {
+      this.deviceForm.patchValue({
+        latitude: defaultCoords.latitude,
+        longitude: defaultCoords.longitude
+      });
     }
   }
 
@@ -69,8 +89,7 @@ export class DeviceAddEditComponent implements OnInit{
           },
           error:()=>{
             alert("Them that bai")
-          }
-          
+          }        
         })
         
       }
@@ -78,6 +97,7 @@ export class DeviceAddEditComponent implements OnInit{
       this.updateProduct()
     }
   }
+
   updateProduct(){
     this._deviceSevice.putDevice(this.data.id, this.deviceForm.value).subscribe({
       next:(res)=>{

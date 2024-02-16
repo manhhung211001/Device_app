@@ -41,6 +41,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {NgChartsModule} from 'ng2-charts';
 import { ChartsComponent } from './charts/charts.component';
 import { DeviceService } from './services/device.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -87,7 +88,10 @@ import { DeviceService } from './services/device.service';
     HttpClientModule,
     MatSortModule,
     MatSnackBarModule,
-    NgChartsModule
+    NgChartsModule,
+    FormsModule
+
+    
     
   ],
   providers: [DeviceService],

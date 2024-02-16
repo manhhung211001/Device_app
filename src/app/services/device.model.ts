@@ -6,6 +6,9 @@ export interface Device {
    size: number,
    price: number,
    location:string,
+   latitude: number;
+   longitude: number;
    date:any,
    note:string
   }
+
