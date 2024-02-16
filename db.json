@@ -8,72 +8,6 @@
   ],
   "device": [
     {
-      "deviceName": "Router Wifi Tenda",
-      "weight": 4,
-      "size": 66,
-      "price": 343,
-      "location": "Cầu Giấy",
-      "date": "2024-01-13T17:00:00.000Z",
-      "note": "234",
-      "id": "ce5c"
-    },
-    {
-      "id": "b445",
-      "deviceName": "Router Wifi Tenda",
-      "weight": 4,
-      "size": 66,
-      "price": 343,
-      "location": "Tây hồ",
-      "date": "2024-01-13T17:00:00.000Z",
-      "note": "234"
-    },
-    {
-      "id": "bd59",
-      "deviceName": "Camera Ezviz C6N",
-      "weight": 5,
-      "size": 2,
-      "price": 55,
-      "location": "Thanh Xuân",
-      "date": "2024-01-11T17:00:00.000Z",
-      "note": "2332"
-    },
-    {
-      "id": "f155",
-      "deviceName": "Router Wifi Tenda",
-      "weight": 32,
-      "size": 23,
-      "price": 23,
-      "location": "Cầu Giấy",
-      "latitude": "1212",
-      "longitude": "323",
-      "date": "2024-02-19T17:00:00.000Z",
-      "note": "4"
-    },
-    {
-      "id": "b59d",
-      "deviceName": "Router Wifi Tenda",
-      "weight": 32,
-      "size": 23,
-      "price": 23,
-      "location": "Cầu Giấy",
-      "latitude": "1212",
-      "longitude": "323",
-      "date": "2024-02-19T17:00:00.000Z",
-      "note": "4"
-    },
-    {
-      "id": "7a58",
-      "deviceName": "Dir conditioning",
-      "weight": 4,
-      "size": 23,
-      "price": 23,
-      "location": "Cầu Giấy",
-      "latitude": 21.036044,
-      "longitude": 105.790054,
-      "date": "2024-02-17T17:00:00.000Z",
-      "note": "34"
-    },
-    {
       "deviceName": "Dir conditioning",
       "weight": 4,
       "size": 23,
@@ -110,16 +44,16 @@
       "note": "34"
     },
     {
-      "id": "a5f1",
       "deviceName": "Router Wifi Tenda",
       "weight": 422,
       "size": 23,
       "price": 34,
-      "location": "Thanh Xuân",
-      "latitude": 21.00617,
-      "longitude": 105.805721,
+      "location": "Cầu Giấy",
+      "latitude": 21.036044,
+      "longitude": 105.790054,
       "date": "2024-02-17T17:00:00.000Z",
-      "note": "34"
+      "note": "34",
+      "id": "a5f1"
     }
   ]
 }
