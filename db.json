@@ -54,6 +54,42 @@
       "date": "2024-02-17T17:00:00.000Z",
       "note": "34",
       "id": "a5f1"
+    },
+    {
+      "id": "eae2",
+      "deviceName": "Router Wifi Tenda",
+      "weight": 56,
+      "size": 4,
+      "price": 56,
+      "location": "Thanh Xuân",
+      "latitude": 21.00617,
+      "longitude": 105.805721,
+      "date": "2024-02-17T17:00:00.000Z",
+      "note": "43"
+    },
+    {
+      "id": "da44",
+      "deviceName": "Router Wifi Tenda",
+      "weight": 12,
+      "size": 12,
+      "price": 22,
+      "location": "Cầu Giấy",
+      "latitude": 21.036044,
+      "longitude": 105.790054,
+      "date": "2024-02-26T17:00:00.000Z",
+      "note": "kk"
+    },
+    {
+      "id": "a8ac",
+      "deviceName": "Dir conditioning",
+      "weight": 32,
+      "size": 4,
+      "price": 54,
+      "location": "Cầu Giấy",
+      "latitude": 21.036044,
+      "longitude": 105.790054,
+      "date": "2024-02-28T17:00:00.000Z",
+      "note": "34"
     }
   ]
 }

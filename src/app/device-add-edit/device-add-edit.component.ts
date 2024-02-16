@@ -30,7 +30,6 @@ export class DeviceAddEditComponent implements OnInit{
     'Tây hồ': { latitude: 21.064519, longitude:  105.809917 },
     'Cầu Giấy': { latitude:21.036044 , longitude:  105.790054 },
     'Thanh Xuân': { latitude: 21.006170, longitude:  105.805721},
-
   };
 
   constructor(
@@ -38,9 +37,7 @@ export class DeviceAddEditComponent implements OnInit{
     private _deviceSevice: DeviceService, 
     private _dialogRef: MatDialogRef<DeviceAddEditComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Device
-    ){
-
-  }
+    ){ }
 
   ngOnInit(): void {
     this.deviceForm = this._fb.group({
@@ -58,16 +55,9 @@ export class DeviceAddEditComponent implements OnInit{
     if(this.data){
       this.actionBtn = "update";
       this.deviceForm.patchValue(this.data);
-      // this.deviceForm.controls['deviceName'].setValue(this.data.deviceName);
-      // this.deviceForm.controls['weight'].setValue(this.data.weight);
-      // this.deviceForm.controls['size'].setValue(this.data.size);
-      // this.deviceForm.controls['price'].setValue(this.data.price);
-      // this.deviceForm.controls['location'].setValue(this.data.location);
-      // this.deviceForm.controls['date'].setValue(this.data.date);
-      // this.deviceForm.controls['note'].setValue(this.data.note);
     }
-
   }
+
   onLocationChange(location: string) {
     const defaultCoords = this.defaultCoordinates[location];
     if (defaultCoords) {
@@ -90,8 +80,7 @@ export class DeviceAddEditComponent implements OnInit{
           error:()=>{
             alert("Them that bai")
           }        
-        })
-        
+        })   
       }
     }else{
       this.updateProduct()
@@ -108,8 +97,7 @@ export class DeviceAddEditComponent implements OnInit{
       error:()=>{
         alert("updata that bai");
       }
-    })
-    
+    })  
   }
 
 }

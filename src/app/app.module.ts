@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { MapComponent } from './map/map.component';
-import { DevicelistComponent } from './devicelist/devicelist.component';
-import { DeviceAddEditComponent } from './device-add-edit/device-add-edit.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HomeComponent} from './home/home.component';
+import {MapComponent} from './map/map.component';
+import {DevicelistComponent} from './devicelist/devicelist.component';
+import {DeviceAddEditComponent} from './device-add-edit/device-add-edit.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -33,15 +33,15 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatNativeDateModule } from '@angular/material/core';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { MatSortModule } from '@angular/material/sort';
+import {MatNativeDateModule} from '@angular/material/core';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {MatSortModule} from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {NgChartsModule} from 'ng2-charts';
-import { ChartsComponent } from './charts/charts.component';
-import { DeviceService } from './services/device.service';
-import { FormsModule } from '@angular/forms';
+import {ChartsComponent} from './charts/charts.component';
+import {DeviceService} from './services/device.service';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -90,8 +90,6 @@ import { FormsModule } from '@angular/forms';
     MatSnackBarModule,
     NgChartsModule,
     FormsModule
-
-    
     
   ],
   providers: [DeviceService],

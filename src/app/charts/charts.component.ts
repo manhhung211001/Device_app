@@ -1,9 +1,5 @@
 import { Component,OnInit } from '@angular/core';
 import { Chart  } from 'chart.js';
-
-
-
-
 import { DeviceService } from '../services/device.service';
 
 @Component({
@@ -11,17 +7,15 @@ import { DeviceService } from '../services/device.service';
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.css']
 })
+
 export class ChartsComponent implements OnInit{
-  
+
 data:any;
 datadevice:any[]=[];
 datalocation:any[]=[];
 deviceCountsByLocation: any;
 
 constructor(private deviceservice:DeviceService){}
-
-
-
 
 ngOnInit() {
   this.deviceservice.getDeviceList().subscribe(res => {
@@ -61,13 +55,11 @@ showChartData() {
       const entry = this.deviceCountsByLocation.find((item: { deviceName: unknown; location: unknown; }) => item.deviceName === deviceName && item.location === location);
       return entry ? entry.count : 0;
     });
-
     return {
       data: data,
       label: deviceName,
     };
   });
-
   this.showchartdata(uniqueLocations, datasets);
 }
 
@@ -87,5 +79,4 @@ showchartdata(datalocation: any[], datasets: any[]) {
     }
   });
 }
-
 }

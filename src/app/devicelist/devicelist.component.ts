@@ -46,8 +46,6 @@ export class DevicelistComponent implements OnInit {
     });
   }
 
-
-
   getDeviceList(){
     this._deviceService.getDeviceList().subscribe({
       next: (res)=>{
