@@ -19,7 +19,7 @@ export class MapComponent implements OnInit {
   id: any;
   device: any;
   searched: boolean = false;
-
+  ad:any;
   
 
   constructor(private deviceService: DeviceService) {}
