@@ -1,6 +1,7 @@
 import {  Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 import { DeviceService } from '../services/device.service';
+import { FirebaseService } from '../services/firebase.service';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -14,7 +15,7 @@ export class MapComponent implements OnInit {
   id: any;
   device: any;
   searched: boolean = false;
-  constructor(private deviceService: DeviceService) {}
+  constructor(private deviceService: DeviceService,private firebaseService: FirebaseService) {}
   ngOnInit(): void {
     // Khởi tạo vị trí ban đầu của bản đồ (ví dụ: trung tâm Hà Nội)
     // Bạn có thể điều chỉnh tùy theo nhu cầu của bạn
@@ -41,9 +42,24 @@ export class MapComponent implements OnInit {
       console.log('Please enter an ID');
       return;
     }
-    this.deviceService.getDeviceId(this.id).subscribe(
-      (data) => {
-        this.device = data;
+    // this.deviceService.getDeviceId(this.id).subscribe(
+    //   (data) => {
+    //     this.device = data;
+    //     this.searched = true;
+
+    //     if (this.device && this.device.latitude && this.device.longitude) {
+    //       this.updateMap(this.device.latitude, this.device.longitude);
+    //     } else {
+    //       console.log('No location found for the device.');
+    //     }
+    //   },
+    //   (error) => {
+    //     console.error('Error searching for device:', error);
+    //   }
+    // );
+
+    this.firebaseService.getDataById(this.id, 'device').then(res=>{
+        this.device = res.data();
         this.searched = true;
 
         if (this.device && this.device.latitude && this.device.longitude) {
@@ -51,11 +67,7 @@ export class MapComponent implements OnInit {
         } else {
           console.log('No location found for the device.');
         }
-      },
-      (error) => {
-        console.error('Error searching for device:', error);
-      }
-    );
+    })
   }
 
   updateMap(latitude: number, longitude: number): void {

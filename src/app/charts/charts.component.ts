@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { Chart  } from 'chart.js';
-import { DeviceService } from '../services/device.service';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-charts',
@@ -14,31 +14,28 @@ data:any;
 datadevice:any[]=[];
 datalocation:any[]=[];
 deviceCountsByLocation: any;
-
-constructor(private deviceservice:DeviceService){}
+constructor( private firebaseService: FirebaseService,){}
 
 ngOnInit() {
-  this.deviceservice.getDeviceList().subscribe(res => {
+  this.firebaseService.getDatas('device').subscribe(res=>{
+
     this.data = res;
     if (this.data != null) {
       this.countDevicesByLocation();
       this.showChartData();
     }
-  });
+  })
 }
 
 countDevicesByLocation() {
   const deviceCountMap = new Map();
-
   this.data.forEach((item: { deviceName: any; location: any; }) => {
     const deviceName = item.deviceName;
     const location = item.location;
-
     const key = `${deviceName}-${location}`;
     deviceCountMap.set(key, (deviceCountMap.get(key) || 0) + 1);
   });
 
-  // Convert the map to an array of objects
   this.deviceCountsByLocation = Array.from(deviceCountMap.entries()).map(([key, count]) => {
     const [deviceName, location] = key.split('-');
     return { deviceName, location, count };

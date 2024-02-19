@@ -8,7 +8,7 @@ export interface Device {
    location:string,
    latitude: number;
    longitude: number;
-   date:any,
+   date:Date,
    note:string
   }
 

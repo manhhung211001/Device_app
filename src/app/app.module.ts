@@ -42,8 +42,9 @@ import {NgChartsModule} from 'ng2-charts';
 import {ChartsComponent} from './charts/charts.component';
 import {DeviceService} from './services/device.service';
 import {FormsModule} from '@angular/forms';
-
-
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { FirebaseService } from './services/firebase.service';
 
 @NgModule({
   declarations: [
@@ -89,10 +90,19 @@ import {FormsModule} from '@angular/forms';
     MatSortModule,
     MatSnackBarModule,
     NgChartsModule,
-    FormsModule
-    
+    FormsModule,
+    provideFirebaseApp(() => initializeApp({
+      apiKey: "AIzaSyDPdv4UdEFeBppguBfo8E3zf1Mni_XfLOI",
+      authDomain: "device-vht.firebaseapp.com",
+      projectId: "device-vht",
+      storageBucket: "device-vht.appspot.com",
+      messagingSenderId: "742606330830",
+      appId: "1:742606330830:web:8c7563f782b0bd4d4b699f",
+      measurementId: "G-SW462LXYKW"
+    })),
+    provideFirestore(() => getFirestore()),
   ],
-  providers: [DeviceService],
+  providers: [DeviceService,FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

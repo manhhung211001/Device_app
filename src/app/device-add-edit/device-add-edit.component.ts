@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Device } from '../services/device.model';
 import { DeviceService } from '../services/device.service';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-device-add-edit',
@@ -34,6 +35,7 @@ export class DeviceAddEditComponent implements OnInit{
 
   constructor(
     private _fb: FormBuilder, 
+    private firebaseService: FirebaseService,
     private _deviceSevice: DeviceService, 
     private _dialogRef: MatDialogRef<DeviceAddEditComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Device
@@ -71,16 +73,11 @@ export class DeviceAddEditComponent implements OnInit{
   addProduct(){
     if(!this.data){
       if(this.deviceForm.valid){
-        this._deviceSevice.addDevice(this.deviceForm.value).subscribe({
-          next:(res)=>{
-            alert("them thanh cong");
-            this.deviceForm.reset();
-            this._dialogRef.close('save');
-          },
-          error:()=>{
-            alert("Them that bai")
-          }        
-        })   
+        this.firebaseService.addData(this.deviceForm.value, 'device').then(res=>{
+          alert("them thanh cong");
+          this.deviceForm.reset();
+          this._dialogRef.close('save');
+        })
       }
     }else{
       this.updateProduct()
@@ -88,16 +85,14 @@ export class DeviceAddEditComponent implements OnInit{
   }
 
   updateProduct(){
-    this._deviceSevice.putDevice(this.data.id, this.deviceForm.value).subscribe({
-      next:(res)=>{
+    const dataSubmit = {
+      id: this.data.id,
+      ...this.deviceForm.value
+    } 
+    this.firebaseService.updateData(dataSubmit,'device').then(res=>{
         alert("updata thanh cong");
         this.deviceForm.reset();
         this._dialogRef.close('update');
-      },
-      error:()=>{
-        alert("updata that bai");
-      }
-    })  
+    })
   }
-
 }

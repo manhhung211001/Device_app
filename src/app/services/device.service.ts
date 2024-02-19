@@ -7,7 +7,8 @@ import { Device } from './device.model';
 })
 export class DeviceService {
 
-  constructor(private _http: HttpClient) {}
+  constructor(private _http: HttpClient,
+    ) {}
 
 
   addDevice(data: Device){
