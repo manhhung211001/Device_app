@@ -90,6 +90,18 @@
       "longitude": 105.790054,
       "date": "2024-02-28T17:00:00.000Z",
       "note": "34"
+    },
+    {
+      "id": "3541",
+      "deviceName": "Camera Ezviz C6N",
+      "weight": 43,
+      "size": 54,
+      "price": 365,
+      "location": "Thanh Xuân",
+      "latitude": 21.00617,
+      "longitude": 105.805721,
+      "date": "2024-02-19T17:00:00.000Z",
+      "note": "234"
     }
   ]
 }
