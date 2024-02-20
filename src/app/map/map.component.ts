@@ -42,21 +42,6 @@ export class MapComponent implements OnInit {
       console.log('Please enter an ID');
       return;
     }
-    // this.deviceService.getDeviceId(this.id).subscribe(
-    //   (data) => {
-    //     this.device = data;
-    //     this.searched = true;
-
-    //     if (this.device && this.device.latitude && this.device.longitude) {
-    //       this.updateMap(this.device.latitude, this.device.longitude);
-    //     } else {
-    //       console.log('No location found for the device.');
-    //     }
-    //   },
-    //   (error) => {
-    //     console.error('Error searching for device:', error);
-    //   }
-    // );
 
     this.firebaseService.getDataById(this.id, 'device').then(res=>{
         this.device = res.data();

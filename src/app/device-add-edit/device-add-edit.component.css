@@ -1,24 +1,47 @@
+/* CSS cho giao diện trên máy tính hoặc màn hình lớn */
 .content {
     padding-top: 10px;
+    max-width: 768px; /* Giới hạn chiều rộng của nội dung để tránh màn hình quá rộng */
+    margin: 0 auto; /* Canh giữa nội dung */
 }
 
-.row{
+.row {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Khoảng cách giữa các phần tử trong hàng */
 }
 
-mat-form-field{
-    width: 100%;
+mat-form-field, input, textarea {
+    width: 100%; /* Chiều rộng của các phần tử nhập liệu */
 }
 
-.action{
-    padding: 0px 25px 20px;
+.action {
+    padding: 0px 25px 20px; /* Phần lề của phần action */
 }
 
-button{
-    flex: 1;
+button {
+    flex: 1; /* Mở rộng nút để lấp đầy không gian trong phần action */
 }
 
-.note{
-    width: 100%;
+.note {
+    width: 100%; /* Chiều rộng của phần tử note */
+}
+
+/* CSS cho giao diện trên điện thoại hoặc màn hình nhỏ */
+@media screen and (max-width: 768px) {
+    .content {
+        padding-top: 5px; /* Giảm padding-top để tiết kiệm không gian */
+        max-width: none; /* Bỏ giới hạn chiều rộng */
+    }
+    
+    .row {
+        flex-direction: column; /* Sắp xếp các phần tử trong cột thay vì hàng */
+    }
+    
+    mat-form-field, input, textarea, .note {
+        width: 100%; /* Chiều rộng của các phần tử nhập liệu và phần tử note */
+    }
+    
+    .action {
+        padding: 0px; /* Bỏ padding trong phần action */
+    }
 }
