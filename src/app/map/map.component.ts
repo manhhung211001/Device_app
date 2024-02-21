@@ -1,6 +1,5 @@
 import {  Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
-import { DeviceService } from '../services/device.service';
 import { FirebaseService } from '../services/firebase.service';
 @Component({
   selector: 'app-map',
@@ -15,10 +14,9 @@ export class MapComponent implements OnInit {
   id: any;
   device: any;
   searched: boolean = false;
-  constructor(private deviceService: DeviceService,private firebaseService: FirebaseService) {}
+  constructor(private firebaseService: FirebaseService) {}
   ngOnInit(): void {
-    // Khởi tạo vị trí ban đầu của bản đồ (ví dụ: trung tâm Hà Nội)
-    // Bạn có thể điều chỉnh tùy theo nhu cầu của bạn
+
     const defaultLatitude = 21.0285;
     const defaultLongitude = 105.8542;
     this.initializeMap(defaultLatitude, defaultLongitude);
@@ -63,9 +61,9 @@ export class MapComponent implements OnInit {
       center: [longitude, latitude],
       zoom: 14
     });
-    // Add navigation control to the map
+
     map.addControl(new mapboxgl.NavigationControl());
-    // Thêm marker cho vị trí của thiết bị trên bản đồ
+
     new mapboxgl.Marker().setLngLat([longitude, latitude]).addTo(map);
   }
 }

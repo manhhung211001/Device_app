@@ -36,7 +36,6 @@ export class DeviceAddEditComponent implements OnInit{
   constructor(
     private _fb: FormBuilder, 
     private firebaseService: FirebaseService,
-    private _deviceSevice: DeviceService, 
     private _dialogRef: MatDialogRef<DeviceAddEditComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Device
     ){ }

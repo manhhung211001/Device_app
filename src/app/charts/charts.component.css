@@ -1,9 +1,9 @@
 .chart{
     top: 40px;
-    width: 100%; /* Adjust the width of the container as needed */
+    width: 100%;
     margin: auto;
     position: relative;
-    padding-top: 75%; /* 4:3 aspect ratio (for example) */
+    padding-top: 75%; 
 }
 
 .chart canvas {

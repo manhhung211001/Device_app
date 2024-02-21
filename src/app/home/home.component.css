@@ -1,16 +1,16 @@
 h1{
-    font-size: 4vw; /* Sử dụng 4% của chiều rộng của khung hình */
+    font-size: 4vw;
     margin-top: 7vh;
 }
 
 img{   
-    max-width: 70%; /* Sử dụng 90% của chiều rộng của khung hình */
+    max-width: 70%; 
     height: auto; 
     margin:5% auto;
 }
 
 @media only screen and (orientation: landscape) {
     h1 {
-        margin-top: 7vw; /* Khi xoay ngang, sử dụng 5% của chiều rộng của khung hình */
+        margin-top: 7vw; 
     }
 }
